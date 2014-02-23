@@ -1,0 +1,23 @@
+{
+    "name": "andres-montanez/recommendations-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 bundle that implements a Recommendations Engine with MongoDB",
+    "keywords": ["mongodb", "recommendations"],
+    "homepage": "https://github.com/andres-montanez/RecommendationsBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrés Montañez",
+            "email": "andres@andresmontanez.com",
+            "homepage": "http://andresmontanez.com"
+        }
+    ],
+    "require": {
+        "php":                       ">=5.3.3",
+        "symfony/framework-bundle":  ">=2.4.0"
+    },
+    "autoload": {
+        "psr-0": { "AndresMontanez\\RecommendationsBundle": "" }
+    },
+    "target-dir": "AndresMontanez/RecommendationsBundle"
+}

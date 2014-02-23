@@ -1,0 +1,7 @@
+parameters:
+#    andres_montanez_recommendations.example.class: AndresMontanez\RecommendationsBundle\Example
+
+services:
+    andres_montanez_recommendations.recommendation:
+        class: AndresMontanez\RecommendationsBundle\Service\RecommendationService
+        arguments: [%kernel.cache_dir%, %andres_montanez_recommendations.mongo_server%, %andres_montanez_recommendations.mongo_db%]
