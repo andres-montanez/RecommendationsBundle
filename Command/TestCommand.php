@@ -19,7 +19,9 @@ class TestCommand extends ContainerAwareCommand
     {
     	$recommendationService = $this->getContainer()->get('andres_montanez_recommendations.recommendation');
 
+    	$time = microtime(true);
     	$recommendations = $recommendationService->getRecommendations(10, 15);
+    	var_dump(microtime(true) - $time);
     	print_r($recommendations);
     }
 }
