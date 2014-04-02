@@ -29,7 +29,7 @@ class RecommendationService
 		$document = array(
 			'namespace' => $namespace,
 			'type' => $type,
-			'id' => item,
+			'id' => $item,
 			'tags' => $tags
 		);
 
