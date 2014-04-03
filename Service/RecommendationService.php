@@ -37,6 +37,17 @@ class RecommendationService
 		$itemsCollection->insert($document);
 	}
 
+	public function removeItem($item, $namespace = 'default')
+	{
+		$document = array(
+			'namespace' => $namespace,
+			'id' => $item,
+		);
+
+		$itemsCollection = $this->db->items;
+		$itemsCollection->remove($document);
+	}
+
 	/**
 	 * User <Jon> <rated> the <movie Batman> with a value of <5>
 	 * User <Betty> <liked> the <episode Pilot>
