@@ -24,6 +24,20 @@ class RecommendationService
 		}
 	}
 
+    public function itemRegistered($item, $type, $namespace = 'default')
+    {
+        $query = array(
+            'namespace' => $namespace,
+            'type' => $type,
+            'id' => $item
+        );
+
+        $itemsCollection = $this->db->items;
+        $document = $itemsCollection->findOne($query);
+
+        return (boolean) $document;
+    }
+
 	public function registerItem($item, $type, $tags = array(), $namespace = 'default')
 	{
 		$document = array(
