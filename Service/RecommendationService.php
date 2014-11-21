@@ -80,6 +80,22 @@ class RecommendationService
         $actionsCollection->insert($document);
 	}
 
+    /**
+     * Remove an interaction
+     */
+    public function removeAction($user, $verb, $item, $namespace = 'default')
+    {
+        $document = array(
+            'namespace' => $namespace,
+            'verb' => $verb,
+            'user' => $user,
+            'item' => $item,
+        );
+
+        $actionsCollection = $this->db->actions;
+        $actionsCollection->remove($document);
+    }
+
 	public function getRecommendations($userId, $top = 30, $type = null, $tag = null, $namespace = 'default') {
 		$masterTable = $this->getSimilarities($type, $tag, $namespace);
 
